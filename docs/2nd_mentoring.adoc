@@ -1,0 +1,37 @@
+= 2nd Mentoring on 2022-11-19
+
+== Questions
+
+[qanda]
+Q1. 저희가 저번 강의의 프로젝트를 진행하던 중 깃허브 충돌로 프로젝트를 여러 번 날린 적이 있습니다. 이를 해결하기 위해 깃허브의 브랜치 기능을 사용하려 하는데, 브랜치 기능의 사용법과 활용하는 방법이 궁금합니다.::
+TBD
+
+Q2. 프로젝트의 프론트-백엔드 통신을 저번에 설명해주신 Restful api인 axios를 사용하기로 하였습니다. 그 중, XML과 JSON으로 통신하는 경우 두 가지가 있던데, JSON을 더 많이 사용하는 이유가 궁금합니다.::
+TBD
+
+Q3. 저희가 축구선수 데이터베이스를 추가하는 도중, import 시 글자가 깨져서 저장이 되는 문제를 겪고 있습니다. 예를 들어 ó는 정상적으로 저장이 되지만, Ö는 깨져서 저장이 되곤 합니다. 데이터베이스에서 외국어 깨짐 문제를 해결하는 법이 궁금합니다.::
+TBD
+
+Q4. 종종 강의의 과제로 UML 다이어그램을 작성해야 하는데, 이를 작성하는 것이 상당히 어렵다고 느끼곤 합니다. UML 다이어그램을 작성하는 팁이 있으신지 궁금합니다.::
+TBD
+
+== Git Branch 활용
+
+=== Project 생성
+
+==== Spring
+Navigate to https://start.spring.io/
+
+==== Git repository
+https://github.com/credemol/team0209
+
+----
+echo "# team0209" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:credemol/team0209.git
+git push -u origin main
+----
+
