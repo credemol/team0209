@@ -111,3 +111,4 @@ SELECT id, username from user;
 == Release Note
 
 - add user service
+- ddd.... member service
