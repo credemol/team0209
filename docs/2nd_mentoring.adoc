@@ -110,5 +110,6 @@ SELECT id, username from user;
 
 == Release Note
 
+- admin service
 - add user service
 - ddd.... member service
