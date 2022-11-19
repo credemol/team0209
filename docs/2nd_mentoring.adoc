@@ -36,6 +36,18 @@ git remote add origin credemol@github.com:credemol/team0209.git
 git push -u origin main
 ----
 
+=== Git branches
+
+* main branch
+* milestone branches(eg, 2022-Nov-M2)
+* feature branches(eg, user-service, admin-service)
+
+=== Procedures
+1. The main branch(already created)
+1. A milestone branch is created when a milestone starts. This will be merged to the main branch.
+1. A feature branch is created when a issue is handled. This will be merged to a milestone branch.
+
+
 === sample
 
 
@@ -43,5 +55,56 @@ git push -u origin main
 - working on user management
 - working on user login
 
+== JSON rather than XML
 
+[source,javascript]
+----
+const result = '{"result": { "code": "200", "message": "OK"}}'
+
+const jsonObj = JSON.parse(result)
+jsonObj.result.code
+
+
+const resultXml = '<response><result><code>200</code><message>OK</message></result></response>'
+
+const parser = new DOMParser();
+const doc = parser.parseFromString(resultXml, "application/xml");
+
+doc.querySelector("code")
+doc.querySelector("code").textContent
+
+----
+
+NOTE: JSON stands for JavaScript Object Notation. JSON is a lightweight format for storing and transporting data
+
+* less data size
+* easier to parse data
+* easier to access properties
+
+== UML
+
+* https://plantuml.com/ - Design
+* IntelliJ UML(IDEA plug-ins) - After Implementation
+
+
+== MySQL Character set
+
+https://dev.mysql.com/doc/refman/8.0/en/charset-mysql.html
+
+----
+show character set like 'utf%'
+
+SELECT `default_character_set_name`, DEFAULT_COLLATION_NAME FROM information_schema.SCHEMATA
+WHERE schema_name = "team0209";
+
+
+
+INSERT INTO user (id, username)
+VALUES
+    (1, 'ÖÖÖÖÖÖ'),
+    (2, 'credemol');
+
+SELECT id, username from user;
+
+----
 
